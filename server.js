@@ -77,15 +77,6 @@ app.get("/articles", function (req, res) {
   })
 });
 
-// Route for grabbing a specific Article by id, populate it with it's note
-app.get("/articles/:id", function (req, res) {
-  // TODO
-  // ====
-  // Finish the route so it finds one article using the req.params.id,
-  // and run the populate method with "note",
-  // then responds with the article with the note included
-});
-
 // Route for saving/updating an Article's associated Note
 app.post("/articles/:id", function (req, res) {
   // TODO
