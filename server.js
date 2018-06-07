@@ -25,9 +25,21 @@ app.use(logger("dev"));
 app.use(bodyParser.urlencoded({ extended: true }));
 // Use express.static to serve the public folder as a static directory
 app.use(express.static("public"));
+mongoose.Promise = Promise;
 
 // Connect to the Mongo DB
-mongoose.connect("mongodb://rovch:3673wj@ds251240.mlab.com:51240/heroku_qz72vj6g");
+var MONGODB_URI = "mongodb://rovch:3673wj@ds251240.mlab.com:51240/heroku_qz72vj6g"
+let dbUrl = "mongodb://localhost/Scraper";
+
+if (MONGODB_URI) {
+	mongoose.connect("mongodb://rovch:3673wj@ds251240.mlab.com:51240/heroku_qz72vj6g");
+}
+else {
+	mongoose.connect("mongodb://localhost/Scraper");
+};
+
+// mongoose.connect("mongodb://rovch:3673wj@ds251240.mlab.com:51240/heroku_qz72vj6g");
+// mongoose.connect('mongodb://localhost/Scraper');
 
 // Routes
 
