@@ -38,9 +38,6 @@ else {
 	mongoose.connect("mongodb://localhost/Scraper");
 };
 
-// mongoose.connect("mongodb://rovch:3673wj@ds251240.mlab.com:51240/heroku_qz72vj6g");
-// mongoose.connect('mongodb://localhost/Scraper');
-
 // Routes
 
 // A GET route for scraping the echoJS website
